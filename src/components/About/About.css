@@ -1,0 +1,103 @@
+.container-about {
+    display: flex;
+    flex-direction: row;
+    /* Cambiado a fila */
+    align-items: center;
+    justify-content: space-between;
+    /* Espacio entre texto e imagen */
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(190, 173, 143, 0.7), rgba(244, 235, 220, 0.7)),
+        url('https://i.imgur.com/kvoHqmc.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 3rem;
+    /* Opcional: margen horizontal para evitar que el contenido toque los bordes */
+}
+
+.about-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    /* Ajusta el ancho del texto */
+    gap: 1rem;
+}
+
+.about-txt h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 6rem;
+    line-height: 6rem;
+    color: #a88766;
+}
+
+.about-txt p {
+    width: 80%;
+    /* Ajustado para que ocupe todo el ancho del contenedor */
+    font-size: 1.2rem;
+    font-family: "Open Sans", serif;
+    color: #98602c;
+}
+
+.about-txt button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: "Open Sans", serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.about-img {
+    width: 40%;
+    /* Ajusta el ancho de la imagen */
+}
+
+.about-img .img-about {
+    width: 100%;
+    /* Imagen ocupa el 100% del contenedor */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container-about {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .about-txt {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .about-txt h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .about-txt p {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .about-img {
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .about-img .img-about {
+        width: 100%;
+        height: auto;
+    }
+}

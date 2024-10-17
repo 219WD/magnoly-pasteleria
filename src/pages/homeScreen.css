@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* 
+Titulos Uppercase:
+  font-family: "Playfair Display", serif;
+
+Subtitulos Camelcase:
+  font-family: "Libre Baskerville", serif;
+
+Parrafos Camelcase:
+  font-family: "Open Sans", serif;
+
+Botones Uppercase:
+  font-family: "Open Sans", serif;
+
+  Guia de colores:
+  
+  Marron: 98602c
+  Marron oscuro: 62381b
+  Marron intermedio: a88766
+  Marron claro: bead8f
+  Gris: 1d1c21
+
+*/
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1D1C21;
+}

@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    /* Cambiado a fila */
+    align-items: center;
+    justify-content: space-between;
+    /* Espacio entre texto e imagen */
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(137, 73, 37);
+    background: linear-gradient(90deg, rgba(137, 73, 37, 1) 35%, rgba(190, 173, 143, 1) 100%);
+    padding: 3rem;
+    /* Opcional: margen horizontal para evitar que el contenido toque los bordes */
+}
+
+.hero-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    /* Ajusta el ancho del texto */
+    gap: 1rem;
+}
+
+.hero-txt h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 6rem;
+    line-height: 6rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 1s ease-in-out;
+}
+
+.hero-txt h2 {
+    font-family: "Libre Baskerville", serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 1s ease-in-out;
+}
+
+.hero-txt p {
+    width: 80%;
+    /* Ajustado para que ocupe todo el ancho del contenedor */
+    font-size: 1.2rem;
+    font-family: "Open Sans", serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 1s ease-in-out;
+}
+
+.hero-txt button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: "Open Sans", serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 1s ease-in-out;
+}
+
+.hero-txt button:hover {
+    background-color: #1d1c21;
+}
+
+.hero-img {
+    width: 40%;
+    /* Ajusta el ancho de la imagen */
+}
+
+.hero-img .img-hero {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(11px 17px 10px #221409) drop-shadow(-1px -1px 5px #d9d9d9);
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); /* Inicialmente oculta la imagen desde la izquierda */
+    transition: clip-path 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambiar a columna para móviles */
+        height: auto; /* Permitir altura automática en móviles */
+        padding: 2rem 1.5rem; /* Reducir el padding */
+    }
+
+    .hero-txt {
+        width: 100%; /* Ancho completo para texto */
+        align-items: center; /* Centrar contenido */
+        text-align: left; /* Centrar texto */
+        margin-top: 3rem;
+    }
+
+    .hero-txt h1 {
+        font-size: 3.5rem; /* Ajustar tamaño del título */
+        line-height: 4rem; /* Ajustar line-height */
+    }
+
+    .hero-txt h2 {
+        font-size: 1.5rem; /* Ajustar tamaño del subtítulo */
+    }
+
+    .hero-txt p {
+        width: 100%; /* Asegurarse de que ocupe todo el ancho */
+        font-size: 1.2rem; /* Ajustar tamaño del texto */
+    }
+
+    .hero-txt button {
+        font-size: 1.2rem; /* Ajustar tamaño del botón */
+    }
+
+    .hero-img {
+        width: 100%; /* Hacer que la imagen ocupe todo el ancho en móviles */
+        margin-top: 1rem; /* Espacio superior para separación */
+    }
+}
