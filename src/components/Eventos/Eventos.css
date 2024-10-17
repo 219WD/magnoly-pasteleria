@@ -30,7 +30,7 @@
     background-color: #f0f0f0; 
     border-top-left-radius: 50vw;
     border-top-right-radius: 50vw;
-    background-image: url('/src/assets/img-1.jpg');
+    background-image: url('https://res.cloudinary.com/dtxdv136u/image/upload/v1729196866/img-1_hxeetx.jpg');
     background-position: center;
     background-size: cover;
   }
@@ -65,7 +65,8 @@
     color: #fff;
 }
 
-.eventos-txt button {
+.eventos-txt .button {
+    text-decoration: none;
     background: none;
     border: 1px solid #fff;
     color: #fff;
@@ -78,7 +79,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-.eventos-txt button:hover {
+.eventos-txt .button:hover {
     background-color: #98602c;
 }
 

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './About.css';
-import Dani from '../../assets/IMG-20240717-WA0023.jpg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
@@ -66,7 +65,7 @@ const About = () => {
         </p>
       </div>
       <div className="about-img">
-        <img src={Dani} alt="torta" className="img-about" />
+        <img src="https://res.cloudinary.com/dtxdv136u/image/upload/v1729196886/IMG-20240717-WA0023_gil7mt.jpg" alt="torta" className="img-about" />
       </div>
     </div>
   );

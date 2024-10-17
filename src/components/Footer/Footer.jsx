@@ -1,9 +1,9 @@
 import React from 'react';
 import './Footer.css';
-import Logo from '../../assets/logo.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
+    const whatsappLink = "https://api.whatsapp.com/send/?phone=5493815556840&text=Hola,%20quiero%20contratar%20Su%20Servicio.&type=phone_number&app_absent=0";
     return (
         <div>
             <iframe
@@ -15,7 +15,7 @@ const Footer = () => {
             />
             <footer className='container-footer' id="contacto">
                 <div className="logo-section">
-                    <img src={Logo} alt="Logo" className="footer-logo" />
+                    <img src="https://res.cloudinary.com/dtxdv136u/image/upload/v1729196888/logo_atnzta.png" alt="Logo" className="footer-logo" />
                     <h2>Todo sale rico si se hace con amor</h2>
                 </div>
                 <div className="footer-content">
@@ -31,9 +31,9 @@ const Footer = () => {
                         <div className="social">
                             <h5>Seguinos en:</h5>
                             <ul className='icons'>
-                                <li><i className="fab fa-instagram"></i></li>
-                                <li><i className="fab fa-facebook"></i></li>
-                                <li><i className="fab fa-whatsapp"></i></li>
+                                <li><a href="https://www.instagram.com/magnolypasteleria/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100063639187307&__tn__=-UC*F" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a></li>
+                                <li><a href={whatsappLink} className='button-footer' target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>

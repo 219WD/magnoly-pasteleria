@@ -61,7 +61,8 @@
     transition: clip-path 1s ease-in-out;
 }
 
-.hero-txt button {
+.hero-txt .button {
+    text-decoration: none;
     background: none;
     border: 1px solid #fff;
     color: #fff;
@@ -78,7 +79,7 @@
     transition: clip-path 1s ease-in-out;
 }
 
-.hero-txt button:hover {
+.hero-txt .button:hover {
     background-color: #1d1c21;
 }
 

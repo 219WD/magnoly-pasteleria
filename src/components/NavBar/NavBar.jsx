@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './NavBar.css';
-import Logo from '../../assets/logo.png';
 import { gsap } from 'gsap'; 
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'; // Importar el plugin
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -78,7 +77,7 @@ const NavBar = () => {
   return (
     <nav id="navBar">
       <div className="logo">
-        <img src={Logo} alt="Logo" />
+        <img src="https://res.cloudinary.com/dtxdv136u/image/upload/v1729196888/logo_atnzta.png" alt="Logo" />
       </div>
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
         <li><a href="#sobre-mi" onClick={handleLinkClick}>Sobre mí</a></li>

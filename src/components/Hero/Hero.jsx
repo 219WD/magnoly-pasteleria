@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import './Hero.css';
-import Torta from '../../assets/torta.png';
 import { gsap } from 'gsap';
 
 const Hero = () => {
-
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=5493815556840&text=Hola,%20quiero%20contratar%20Su%20Servicio.&type=phone_number&app_absent=0";
   useEffect(() => {
     // Animar el clip-path para el título
     gsap.to(".hero-txt .title", {
@@ -28,7 +27,7 @@ const Hero = () => {
         delay: 0.9, // Retraso para mejorar la experiencia visual
       });
 
-      gsap.to(".hero-txt button", {
+      gsap.to(".hero-txt .button", {
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", // Revela el texto desde abajo hacia arriba
         duration: 1.5,
         ease: "power3.inOut",
@@ -55,10 +54,10 @@ const Hero = () => {
         <h2>Todo sale rico si se hace con amor</h2>
         <p>Queremos acompañarte en cada ocasión especial y es por ello que te ofrecemos una excelente propuesta para cada ocasión que desees celebrar.
           Conocé todas nuestras sugerencias tanto para eventos como para regalar.</p>
-        <button>Contacto</button>
+        <a href={whatsappLink} className='button'>contacto</a>
       </div>
       <div className="hero-img">
-        <img src={Torta} alt="torta" className="img-hero" />
+        <img src="https://res.cloudinary.com/dtxdv136u/image/upload/v1729196894/torta_m5xm3g.png" alt="torta" className="img-hero" />
       </div>
     </div>
   );
