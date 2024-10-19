@@ -14,20 +14,20 @@ const Eventos = () => {
 
   // Arreglo de productos con sus respectivas imágenes y nombres
   const productos = [
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196866/img-1_hxeetx.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196866/img-2_rc6oug.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196868/img-3_vueyqo.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196869/img-4_entn8k.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196865/img-5_mesieu.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196869/img-6_bp8sgd.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196872/img-7_lfh7uo.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196871/img-8_z6sldh.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196879/img-9_bkqjlp.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196879/img-10_oat6d4.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196873/img-11_cne98m.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196880/img-12_dasutv.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196877/img-13_evzfgh.jpg' },
-    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196878/img-14_xcpu4q.jpg' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196866/img-1_hxeetx.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196866/img-2_rc6oug.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196868/img-3_vueyqo.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196869/img-4_entn8k.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196865/img-5_mesieu.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196869/img-6_bp8sgd.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196872/img-7_lfh7uo.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196871/img-8_z6sldh.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196879/img-9_bkqjlp.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196879/img-10_oat6d4.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196873/img-11_cne98m.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196880/img-12_dasutv.jpg', nombre: 'Mesa dulce' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196877/img-13_evzfgh.jpg', nombre: 'Torta' },
+    { img: 'https://res.cloudinary.com/dtxdv136u/image/upload/v1729196878/img-14_xcpu4q.jpg', nombre: 'Tarta' },
   ];
 
   useEffect(() => {
@@ -169,7 +169,7 @@ const Eventos = () => {
             {productos.map((producto, index) => (
               <li className="card" key={index}>
                 <div className="img">
-                  <img src={producto.img} />
+                  <img src={producto.img} alt={producto.nombre} />
                 </div>
               </li>
             ))}

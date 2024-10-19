@@ -56,7 +56,7 @@ const Hero = () => {
         <a href={whatsappLink} className='button'>contacto</a>
       </div>
       <div className="hero-img">
-        <img src="https://res.cloudinary.com/dtxdv136u/image/upload/v1729196894/torta_m5xm3g.png" alt="torta" className="img-hero" />
+        <img src="https://res.cloudinary.com/dtxdv136u/image/upload/v1729196894/torta_m5xm3g.png" alt="Torta" className="img-hero" />
       </div>
     </div>
   );
