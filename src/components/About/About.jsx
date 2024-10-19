@@ -56,12 +56,9 @@ const About = () => {
       <div className="about-txt">
         <h1>Dani <br /> Paez</h1>
         <p>
-          Queremos acompañarte en cada ocasión especial y es por ello que te ofrecemos
-          una excelente propuesta para cada ocasión que desees celebrar. Queremos
-          acompañarte en cada ocasión especial y es por ello que te ofrecemos una
-          excelente propuesta para cada ocasión que desees celebrar. Conocé todas
-          nuestras sugerencias tanto para eventos como para regalar. Conocé todas
-          nuestras sugerencias tanto para eventos como para regalar.
+        Soy Daniela Paez, y mi pasión por la repostería comenzó cuando era muy chica. Empecé vendiendo alfajorcitos de maicena en el colegio y, con el tiempo, me enamoré de esta profesión. En septiembre de 2019, decidí convertir mi sueño en realidad y lanzar mi propio emprendimiento.
+        <br /> <br /> A lo largo del camino, he enfrentado desafíos, pero nunca perdí la fe en mi trabajo. Me llena de orgullo saber que la gente confía en mí y que puedo ser parte de sus momentos especiales, ya sea un cumpleaños, una celebración familiar o simplemente un fin de semana especial.
+       <br /> <br /> Mi objetivo es que disfruten de cada bocado, lleno de amor y dedicación. ¡Gracias por elegirme y por ser parte de mi historia!
         </p>
       </div>
       <div className="about-img">
