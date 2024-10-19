@@ -1,9 +1,47 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Footer.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
+    const formRef = useRef(null); // Creamos una referencia al formulario
+
+    useEffect(() => {
+        const form = formRef.current; // Accedemos al formulario usando la referencia
+
+        if (form) {
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const telefono = document.getElementById('telefono').value;
+                const mensaje = document.getElementById('mensaje').value;
+                guardarContacto(nombre, email, telefono, mensaje);
+            };
+
+            form.addEventListener('submit', handleSubmit); // Añadimos el listener
+
+            return () => {
+                form.removeEventListener('submit', handleSubmit); // Limpiamos el listener al desmontar el componente
+            };
+        }
+    }, []);
+
+    function guardarContacto(nombre, email, telefono, mensaje) {
+        fetch(`https://docs.google.com/forms/d/e/1FAIpQLSe-kWgIGDBsHIYixffl8vBsQXGD843BO7PmMzbDIhlfV2LCew/formResponse?submit=Submit&usp=pp_url&entry.117591493=${nombre}&entry.862839739=${email}&entry.277956373=${telefono}&entry.894080341=${mensaje}`, {
+            mode: 'no-cors'
+        })
+            .then(() => {
+                alert('Contacto Guardado!');
+                // Limpiar el formulario
+                formRef.current.reset();
+            })
+            .catch(() => {
+                alert('Error al guardar el contacto.');
+            });
+    }
+
     const whatsappLink = "https://api.whatsapp.com/send/?phone=5493815556840&text=Hola,%20quiero%20contratar%20Su%20Servicio.&type=phone_number&app_absent=0";
+
     return (
         <div>
             <iframe
@@ -13,7 +51,7 @@ const Footer = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
             />
-            <footer className='container-footer' id="contacto">
+            <footer className='container-footer'>
                 <div className="logo-section">
                     <img src="https://res.cloudinary.com/dtxdv136u/image/upload/v1729196888/logo_atnzta.png" alt="Logo" className="footer-logo" />
                     <h2>Todo sale rico si se hace con amor</h2>
@@ -21,12 +59,9 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="contact-info">
                         <ul>
-                            <ul>
-                                <li><i className="fas fa-map-marker-alt"></i> Dirección: Calle Falsa 123</li>
-                                <li><i className="fas fa-phone"></i> Teléfono: +54 381 1234567</li>
-                                <li><i className="fas fa-envelope"></i> Email: contacto@miempresa.com</li>
-                            </ul>
-
+                            <li><i className="fas fa-map-marker-alt"></i> Dirección: Mendoza 2300</li>
+                            <li><i className="fas fa-phone"></i> Teléfono: +54 3815 55-6840</li>
+                            <li><i className="fas fa-envelope"></i> Email: magnoly.contacto@gmail.com</li>
                         </ul>
                         <div className="social">
                             <h5>Seguinos en:</h5>
@@ -38,11 +73,11 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="contact-form">
-                        <form>
-                            <input type="text" placeholder="Nombre" required />
-                            <input type="email" placeholder="Email" required />
-                            <input type="tel" placeholder="Teléfono" required />
-                            <textarea placeholder="Mensaje" required></textarea>
+                        <form ref={formRef}>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+                            <input type="email" id="email" name="email" placeholder="Email" required />
+                            <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required />
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                             <button type="submit">Enviar</button>
                         </form>
                     </div>
