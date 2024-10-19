@@ -56,9 +56,9 @@ const About = () => {
       <div className="about-txt">
         <h1>Dani <br /> Paez</h1>
         <p>
-        Soy Daniela Paez, y mi pasión por la repostería comenzó cuando era muy chica. Empecé vendiendo alfajorcitos de maicena en el colegio y, con el tiempo, me enamoré de esta profesión. En septiembre de 2019, decidí convertir mi sueño en realidad y lanzar mi propio emprendimiento.
-        <br /> <br /> A lo largo del camino, he enfrentado desafíos, pero nunca perdí la fe en mi trabajo. Me llena de orgullo saber que la gente confía en mí y que puedo ser parte de sus momentos especiales, ya sea un cumpleaños, una celebración familiar o simplemente un fin de semana especial.
-       <br /> <br /> Mi objetivo es que disfruten de cada bocado, lleno de amor y dedicación. ¡Gracias por elegirme y por ser parte de mi historia!
+        Soy Daniela Paez, y <strong>mi pasión por la repostería</strong> comenzó cuando era muy chica. Empecé vendiendo <strong>alfajorcitos de maicena en el colegio</strong> y, con el tiempo, me enamoré de esta profesión. En septiembre de 2019, decidí convertir <strong>mi sueño en realidad</strong> y lanzar mi propio emprendimiento.
+        <br /> <br /> A lo largo del camino, he enfrentado desafíos, pero nunca perdí <strong>la fe en mi trabajo</strong>. Me llena de orgullo saber que <strong> la gente confía en mí</strong> y que puedo ser parte de sus momentos especiales, ya sea <strong>un cumpleaños</strong>, una celebración familiar o <strong>simplemente un fin de semana especial</strong>.
+       <br /> <br /> Mi objetivo es que <strong>disfruten de cada bocado</strong>, lleno de amor y dedicación. ¡<strong>Gracias por elegirme</strong> y por ser parte de mi historia!
         </p>
       </div>
       <div className="about-img">

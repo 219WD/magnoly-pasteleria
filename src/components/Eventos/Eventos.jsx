@@ -152,17 +152,17 @@ const Eventos = () => {
         </div>
         <div className="eventos-txt">
           <h1>Eventos</h1>
-          <h2>El toque dulce y perfecto para tus eventos</h2>
-          <p>Mini Bocaditos para mesas dulces, variedad y sabor.
-          Tortas personalizadas con diseño y calidad para cumpleaños, bodas, baby showers y más.
-          ¡Pedí tu presupuesto y deja que nos encarguemos de lo dulce!</p>
+          <h2>El toque <strong>dulce y perfecto</strong> para tus eventos</h2>
+          <p>Mini Bocaditos para <strong>mesas dulces</strong>, variedad y sabor.
+          <strong>Tortas personalizadas</strong> con diseño y calidad para <strong>cumpleaños, bodas, baby showers</strong> y más.
+          ¡Pedí tu presupuesto y deja que <strong>nos encarguemos de lo dulce</strong>!</p>
           <a href={whatsappLink} className='button'>contacto</a>
         </div>
       </div>
       <div className="eventos-content-2">
-        <h1>Conoce nuestros productos</h1>
+        <h1>Conoce <strong>nuestros productos</strong></h1>
         <h2>¡Hacé tu pedido!</h2>
-        <p>Descubre nuestra variedad de tartas, tortas, alfajorcitos y mas en nuestra carta o contáctanos para personalizar tu pedido.</p>
+        <p>Descubre nuestra variedad de <strong>tartas, tortas, alfajorcitos</strong> y mas en nuestra carta o contáctanos para personalizar tu pedido.</p>
         <div className="carousel-wrapper">
           <i className="left-arrow" id="left">&lt;</i>
           <ul className="carousel" ref={carouselRef}>

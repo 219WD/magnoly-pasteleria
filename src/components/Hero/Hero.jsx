@@ -52,7 +52,7 @@ const Hero = () => {
       <div className="hero-txt">
         <h1 className="title">Magnoly <br /> Pasteleria</h1>
         <h2>Todo sale rico si se hace con amor</h2>
-        <p>Bienvenidos a Magnoly Pastelería, donde cada bocado es un trabajo hecho con mucho amor y dedicación. </p>
+        <p>Bienvenidos a <strong>Magnoly Pastelería</strong>, donde cada bocado es un trabajo hecho con <strong>mucho amor y dedicación</strong>. </p>
         <a href={whatsappLink} className='button'>contacto</a>
       </div>
       <div className="hero-img">
