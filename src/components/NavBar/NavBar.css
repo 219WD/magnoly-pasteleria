@@ -81,6 +81,7 @@ li a:hover::after{
     left: 0;
     width: 100%;
     z-index: 5;
+    backdrop-filter: blur(10px);
 }
 
 .mobile-menu ul {

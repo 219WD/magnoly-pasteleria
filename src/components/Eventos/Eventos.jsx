@@ -1,4 +1,9 @@
 import React, { useRef, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Autoplay } from 'swiper/modules';
 import './Eventos.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,7 +14,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Eventos = () => {
   const whatsappLink = "https://api.whatsapp.com/send/?phone=5493815556840&text=Hola,%20quiero%20contratar%20Su%20Servicio.&type=phone_number&app_absent=0";
-  const carouselRef = useRef(null);
   const imgEventosRef = useRef(null); // Referencia a la imagen
 
   // Arreglo de productos con sus respectivas imágenes y nombres
@@ -93,56 +97,7 @@ const Eventos = () => {
       },
       0.2
     );
-
-
-    let xPos = 0; // Posición inicial en 0
-    const cardWidth = 300; // Ancho de cada tarjeta
-    const totalWidth = cardWidth * productos.length; // Ancho total del carrusel
-    const cards = carouselRef.current;
-
-    // Clonamos los elementos al final del carrusel para simular un loop infinito
-    const cloneCards = () => {
-      const clone = [...cards.children].map((child) => child.cloneNode(true));
-      clone.forEach((clonedChild) => cards.appendChild(clonedChild));
-    };
-
-    cloneCards(); // Clonamos las tarjetas para loop continuo
-
-    // Mover el carrusel en la dirección dada
-    const moveCarousel = (direction) => {
-      if (direction === 'left') {
-        xPos += cardWidth;
-        if (xPos > 0) xPos = -(totalWidth); // Volver al final si se pasa del inicio
-      } else {
-        xPos -= cardWidth;
-        if (xPos <= -(totalWidth)) {
-          // Restablecer la posición sin que se note el salto
-          xPos = 0;
-          gsap.set(cards, { x: xPos });
-          return;
-        }
-      }
-      gsap.killTweensOf(cards); // Elimina animaciones previas
-      gsap.to(cards, {
-        x: xPos,
-        duration: 0.5,
-        ease: 'power2.inOut',
-      });
-    };
-
-    // Agregar eventos a los botones
-    const handleLeftClick = () => moveCarousel('left');
-    const handleRightClick = () => moveCarousel('right');
-
-    document.getElementById('left').addEventListener('click', handleLeftClick);
-    document.getElementById('right').addEventListener('click', handleRightClick);
-
-    // Limpiar los eventos cuando el componente se desmonta
-    return () => {
-      document.getElementById('left').removeEventListener('click', handleLeftClick);
-      document.getElementById('right').removeEventListener('click', handleRightClick);
-    };
-  }, [productos.length]);
+  }, []);
 
   return (
     <div className='container-eventos' id="eventos">
@@ -164,17 +119,30 @@ const Eventos = () => {
         <h2>¡Hacé tu pedido!</h2>
         <p>Descubre nuestra variedad de <strong>tartas, tortas, alfajorcitos</strong> y mas en nuestra carta o contáctanos para personalizar tu pedido.</p>
         <div className="carousel-wrapper">
-          <i className="left-arrow" id="left">&lt;</i>
-          <ul className="carousel" ref={carouselRef}>
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            navigation
+            autoplay={{ delay: 3000 }}
+            loop
+            spaceBetween={16}
+            slidesPerView={2} // Mostrar 4 slides por vista en pantallas grandes
+            breakpoints={{
+              640: { slidesPerView: 1 },  // 1 slide en pantallas pequeñas
+              768: { slidesPerView: 2 },  // 2 slides en pantallas medianas
+              1024: { slidesPerView: 3 }, // 3 slides en pantallas más grandes
+              1440: { slidesPerView: 4 }, // 4 slides en pantallas grandes
+            }}
+          >
             {productos.map((producto, index) => (
-              <li className="card" key={index}>
-                <div className="img">
-                  <img src={producto.img} alt={producto.nombre} />
+              <SwiperSlide key={index}>
+                <div className="card">
+                  <div className="img">
+                    <img src={producto.img} alt={producto.nombre} />
+                  </div>
                 </div>
-              </li>
+              </SwiperSlide>
             ))}
-          </ul>
-          <i className="right-arrow" id="right">&gt;</i>
+          </Swiper>
         </div>
       </div>
     </div>

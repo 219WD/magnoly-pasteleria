@@ -9,7 +9,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: rgb(137, 73, 37);
+    background: #894925;
     background: linear-gradient(90deg, rgba(137, 73, 37, 1) 35%, rgba(190, 173, 143, 1) 100%);
     padding: 3rem;
     /* Opcional: margen horizontal para evitar que el contenido toque los bordes */

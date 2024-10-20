@@ -49,10 +49,17 @@ const NavBar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    const mobileMenu = document.querySelector('.mobile-menu');
+
     if (!isOpen) {
-      gsap.to('.mobile-menu', { height: '100vh', duration: 1.5, ease: 'power3.inOut' });
+      gsap.to(mobileMenu, { height: '100vh', duration: 1.5, ease: 'power3.inOut' });
+      const mobileMenuItems = mobileMenu.querySelectorAll('ul li');
+
+      // Animación escalonada para los elementos del menú móvil
+      const tl = gsap.timeline();
+      tl.fromTo(mobileMenuItems, { y: -50, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.3, delay: 0.5 });
     } else {
-      gsap.to('.mobile-menu', { height: '0', duration: 1.5, ease: 'power3.inOut' });
+      gsap.to(mobileMenu, { height: '0', duration: 1.5, ease: 'power3.inOut' });
     }
   };
 

@@ -132,23 +132,14 @@
     object-fit: cover;
 }
 
-.left-arrow, .right-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1;
-    color: #fff;
-}
-
-.left-arrow {
-    left: 10px;
-}
-
-.right-arrow {
-    right: 10px;
-}
+.swiper-button-next, .swiper-button-prev {
+    color: #fff; /* Cambia al color que quieras */
+  }
+  
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #bead8f; /* Color al hacer hover */
+  }
+  
 
 
 @media (max-width: 1024px) {
